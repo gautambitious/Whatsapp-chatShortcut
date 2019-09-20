@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "204601825139",
+    "firebase_url": "https://whatsapp-chat-ce634.firebaseio.com",
+    "project_id": "whatsapp-chat-ce634",
+    "storage_bucket": "whatsapp-chat-ce634.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204601825139:android:c23a7f656e1ab1b82dd706",
+        "android_client_info": {
+          "package_name": "com.gautam.whatappchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204601825139-pi423oifkam41v9lfb7frtacv21nrqib.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gautam.whatappchat",
+            "certificate_hash": "579d2278ec691dc6208b8b2ebf32fff5325cff28"
+          }
+        },
+        {
+          "client_id": "204601825139-th1e8tm5i9ajgh2cpqetv39pkmnprda1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2E8awLrDKrEWJBd7pBTFdac9TOXB52ug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204601825139-th1e8tm5i9ajgh2cpqetv39pkmnprda1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
