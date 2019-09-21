@@ -20,7 +20,35 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:digits="+1234567890"
             />
-
     </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phoneNumber"
+        android:drawableStart="@drawable/info_drawable"
+        android:textSize="12sp"
+        android:text="Add Country Code if the number is not from India"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="5dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/phoneNumber"
+        android:layout_marginTop="50dp"
+        android:id="@+id/openButton"
+        android:text="Open"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Source Code"
+        android:id="@+id/sourceCode"
+        android:layout_margin="5dp"
+        android:textColor="@color/colorHyperLink"
+        />
 </RelativeLayout>
