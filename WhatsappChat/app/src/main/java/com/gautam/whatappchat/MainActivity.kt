@@ -2,12 +2,10 @@ package com.gautam.whatappchat
 
 import android.content.Intent
 import android.net.Uri
-import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.text.isDigitsOnly
-import co.metalab.asyncawait.Async
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(){
