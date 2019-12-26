@@ -6,12 +6,11 @@ import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.annotation.RestrictTo
 import androidx.core.text.isDigitsOnly
 import co.metalab.asyncawait.Async
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,10 +41,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkNumber(number: String) {
+        var num=number
+        if(num[0] == '+'){
+            num=num.substring(1)
+        }
         when {
-            number=="0" -> {
-            }
-            number.isDigitsOnly() -> startWhatsapp(number)
+            num.isDigitsOnly() -> startWhatsapp(num)
             else -> Toast.makeText(this, "Invalid Number!", Toast.LENGTH_LONG).show()
         }
     }
@@ -54,14 +55,16 @@ class MainActivity : AppCompatActivity() {
 
         val intent= Intent(Intent.ACTION_VIEW)
         intent.setPackage("com.whatsapp")
-        val data=if(number[0]== '+'){
-            number.substring(1)
-        }
-        else if(number.length==10){
-            "91$number"
-        }
-        else{
-            number
+        val data= when {
+            number[0]== '+' -> {
+                number.substring(1)
+            }
+            number.length==10 -> {
+                "91$number"
+            }
+            else -> {
+                number
+            }
         }
 
         intent.data= Uri.parse("https://wa.me/$data")
